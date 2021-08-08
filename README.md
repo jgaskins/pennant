@@ -31,7 +31,7 @@ end
 
 Now, anywhere in your application, you can simply call `Pennant.enabled?("my-feature")` to see if a particular feature flag is enabled.
 
-To enable or disable a feature flag, you can simply call "Pennant.enable("my-feature")` or `Pennant.disable("my-feature")`, respectively. To run this in production, you can run the following command at a production Bash prompt (assuming your Pennant configuration exists in `./config/pennant.cr`):
+To enable or disable a feature flag, you can simply call `Pennant.enable("my-feature")` or `Pennant.disable("my-feature")`, respectively. To run this in production, you can run the following command at a production Bash prompt (assuming your Pennant configuration exists in `./config/pennant.cr`):
 
 ```
 crystal eval 'require "./config/pennant"; Pennant.enable "my-feature"'
