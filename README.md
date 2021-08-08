@@ -85,11 +85,13 @@ There is a web UI in progress to manage feature flags so that you don't need to 
 http = HTTP::Server.new([
   HTTP::LogHandler.new,
   Pennant::Web.new(mount_at: "/feature_flags"),
-  # ...
+  # the rest of your HTTP handler entries ...
 ])
 ```
 
 With the Lucky framework, you'd insert this into [your `middleware` array](https://luckyframework.org/guides/http-and-routing/http-handlers#built-in-handlers).
+
+With this in place, if you visit your application at `/feature_flags` you will see a list of your feature flags and their current states.
 
 ## Contributing
 
