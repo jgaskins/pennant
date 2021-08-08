@@ -1,0 +1,19 @@
+<h1>Pennant</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Enabled?</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% Pennant.features.sort_by(&.name).each do |feature| %>
+      <tr>
+        <td><%= feature.name %></td>
+        <td><%= feature.enabled? %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</ul>
