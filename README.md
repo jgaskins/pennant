@@ -57,7 +57,7 @@ end
 
 The format of `pennant_id` is up to you, as long as it uniquely identifies that person, group, or concept and resolves to the same value for it every time. For database-backed objects, this is often a class (or table) name and a primary key.
 
-Once you have this in place, you can check whether a feature is enabled by passing `for: actor` to the `enabled?` method:
+Once you have this in place, you can check whether a feature is enabled by passing `for: actor` to the `enable`, `disable`, and `enabled?` method:
 
 ```crystal
 if Pennant.enabled?("my-feature", for: current_user)
